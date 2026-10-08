@@ -1,1 +1,1 @@
-# Her finner du oppgavene jeg har gjort i IT timene
+# Her finner du oppgavene jeg gjør i timen
