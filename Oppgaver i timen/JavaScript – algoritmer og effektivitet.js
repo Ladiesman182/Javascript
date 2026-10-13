@@ -15,3 +15,5 @@ if (funnet) {
 } else {
     console.log("Fant ikke tallet");
 }
+
+let antallSjekker = 0;
