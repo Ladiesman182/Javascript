@@ -1,120 +1,171 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  overflow: hidden;   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: #000;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 500;
+  transition: color .25s;
+}
+
+.nav-links a:hover {
+  color: var(--white);
+}
 
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  height: 70px;
-  padding: 0 25px;
-  background: #1f1f1f;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 70px;
+    padding: 0 25px;
+    background: #1f1f1f;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .brand {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-    
+
 .dropdown {
-  grid-column: 3;
-  justify-self: end;
-  position: relative;
+    grid-column: 3;
+    justify-self: end;
+    position: relative;
 }
 
 .dropdown-btn {
-  padding: 10px 16px;
-  background: #121212;
-  color: #fff;
-  border: 1px solid #333;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
+    padding: 10px 16px;
+    background: #121212;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .dropdown-btn:hover {
-  background: #2a2a2a;
+    background: #2a2a2a;
 }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  min-width: 180px;
-  margin-top: 6px;
-  list-style: none;
-  background: #1f1f1f;
-  border: 1px solid #333;
-  border-radius: 8px;
-  overflow: hidden;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+    margin-top: 6px;
+    list-style: none;
+    background: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu {
-  display: block;
+    display: block;
 }
 
 .dropdown-menu a {
-  display: block;
-  padding: 10px 16px;
-  color: #fff;
-  text-decoration: none;
+    display: block;
+    padding: 10px 16px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .dropdown-menu a:hover {
-  background: #333;
+    background: #333;
 }
 
 .Main1 {
-  position: relative;
-  height: calc(100vh - 70px);  
-  height: calc(100dvh - 70px);
-  padding-bottom: 47vh;        
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("Bilder/Volleyball.jpg");
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    height: calc(100vh - 70px);
+    padding-bottom: 47vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("Bilder/Volleyball.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Main2 {
+    position: relative;
+    height: calc(200vh - 70px);
+    padding-bottom: 47vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("Bilder/Volleyball.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Main2_content {
+    position: relative;
+    width: 100%;
+    padding: 10 20px;
+    text-align: center;
+    transform: translateY(-325px);
+}
+
+.Main2_content h1 {
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    letter-spacing: 1px;
+}
+
+
+.tekst1 {
+    position: relative;
+    width: 100%;
+    padding: 10 20px;
+    text-align: center;
+    transform: translateY(-325px);
 }
 
 .Main1_content {
-  position: relative;
-  width: 100%;
-  padding: 0 24px;
-  text-align: center;
+    position: relative;
+    width: 100%;
+    padding: 0 24px;
+    text-align: center;
 }
 
 .Main1_content h1 {
-  font-size: clamp(2.2rem, 7vw, 4.5rem);
-  margin-bottom: 24px;
-  letter-spacing: 1px;
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    margin-bottom: 29px;
+    letter-spacing: 1px;
 }
-
