@@ -55,55 +55,6 @@ body {
 }
 
 
-.dropdown {
-    grid-column: 3;
-    justify-self: end;
-    position: relative;
-}
-
-.dropdown-btn {
-    padding: 10px 16px;
-    background: #121212;
-    color: #fff;
-    border: 1px solid #333;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.dropdown-btn:hover {
-    background: #2a2a2a;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    min-width: 180px;
-    margin-top: 6px;
-    list-style: none;
-    background: #1f1f1f;
-    border: 1px solid #333;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 16px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.dropdown-menu a:hover {
-    background: #333;
-}
 
 .Main1 {
     position: relative;
@@ -121,31 +72,35 @@ body {
 }
 
 .Main2 {
-    position: relative;
-    height: calc(200vh - 70px);
-    padding-bottom: 47vh;
+    height: calc(100vh - 70px);
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("Bilder/Volleyball.jpg");
     background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
+}
+
+.Main2 {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("Bilder/Volleyball.jpg");
     justify-content: center;
+    padding: 40px 20px;
 }
 
 .Main2_content {
-    position: relative;
-    width: 100%;
-    padding: 10 20px;
     text-align: center;
-    transform: translateY(-325px);
+    margin-bottom: 50px;
 }
 
 .Main2_content h1 {
-    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
     letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.Main2_content p {
+    color: #ccc;
+    font-size: 1.15rem;
 }
 
 
@@ -168,4 +123,94 @@ body {
     font-size: clamp(2.2rem, 7vw, 4.5rem);
     margin-bottom: 29px;
     letter-spacing: 1px;
+}
+
+.Main3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produkter {
+    background: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.25s, border-color 0.25s;
+}
+
+.produkter:hover {
+    background: #2a2a2a;
+    border-color: #555;
+}
+
+.produkter img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+.produkter h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.produkter h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+
+#produktsider {
+    background: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 18px;
+    max-width: 320px;
+    margin: 60px auto;
+    text-align: center;
+    color: #fff;
+}
+
+#produktsider img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+#produktsider h1 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+#produktsider h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+#produktsider button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+#produktsider button:hover {
+    background: #ccc;
 }
