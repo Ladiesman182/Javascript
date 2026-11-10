@@ -34,6 +34,13 @@ const produkter = {
 const id = new URLSearchParams(window.location.search).get("id")
 const produkt = produkter[id]
 
+if (produkt && document.getElementById("bilde")) {
+    document.getElementById("bilde").src = produkt.bilde
+    document.getElementById("bilde").alt = produkt.navn
+    document.getElementById("navn").textContent = produkt.navn
+    document.getElementById("pris").textContent = produkt.pris + " kr"
+}
+
 let handlekruv = []
 
 const lagret = localStorage.getItem("handlekurv")
@@ -80,7 +87,7 @@ if (boks) {
             <div class="kruv-rad">
                 <img src="${vare.bilde}" alt="${vare.navn}">
                 <span>${vare.pris} kr </span>
-                <span>${vare.navn} kr </span>
+                <span>${vare.navn}</span>
                 <button onclick="fjern_fra_kurv(${i})">Fjern</button>
             </div>
         `

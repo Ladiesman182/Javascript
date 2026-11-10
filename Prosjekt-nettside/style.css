@@ -221,3 +221,10 @@ body {
 #produktsider button:hover {
     background: #ccc;
 }
+
+#sok {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-right: 400px;
+}
