@@ -71,9 +71,6 @@ function tom_kurv() {
 }
 
 
-
-
-
 const boks = document.getElementById("kurv-innhold")
 
 if (boks) {
@@ -100,4 +97,24 @@ document.getElementById("sum").textContent = "Sum: " + sum + " Kr"
 
 }
 
+const sok = document.getElementById("sok")
+
+
+
+if (sok) {
+    sok.addEventListener("input", function () {
+        const tekst = sok.value.toLowerCase()
+        const kort = document.querySelectorAll(".produkter")
+
+        for (let i = 0; i < kort.length; i++) {
+            const navn = kort[i].querySelector("h3").textContent.toLowerCase()
+
+            if (navn.includes(tekst)) {
+                kort[i].style.display = ""
+            } else {
+                kort[i].style.display = "none"
+            }
+        }
+    })
+}
 
